@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Your font', sans-serif;
+}
+
+.dumbledore-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #f0f0f0; /* Example background color */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+    /* Add background-image with proper path */
+}

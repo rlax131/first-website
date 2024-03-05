@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quidditch Page</title>
+<link rel="stylesheet" href="sport.css">
+</head>
+<body>
+         <div class="header">
+            <div class="contents">
+                <div class="left">HARRY POTTER</div>
+                <div class="right">
+                    <ul class="menu">
+                        <span class="home" onclick="location.href='kim.html'">HOME</span>
+                        <li onclick="location.href='sport.html'">SPORTS</li>
+                        <li onclick="location.href='house.html'">HOUSES</li>
+                       <li onclick="location.href='login.html'">LOGIN</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+<div class="container">
+  <div class="image-overlay">
+    <div class="text" style="line-height: 29px;">
+      <div class="a">QUIDDITCH</div><br>
+      <p class="aa">Quidditch (formerly known as Kwidditch and Cuaditch) was a wizarding sport played on
+         flying broomsticks. It was the most popular and well-known game among wizards and witches, 
+         and, according to Rubeus Hagrid, the wizard equivalent to Muggles' passion for football.
+         The game was played by two teams with seven members each. The object of the game was to score
+          more points than the opposing team.
+        </div>
+  </div>
+
+  </div>
+
+<section class="description-section">
+  <div class="house-description">
+ 
+  
+    <div  class="house-title">WHEN IT START</div>
+   
+    <p class="paragraph fadeInUp">While Quidditch was the first (and so far, only) 
+      broomstick-based game to attain near-worldwide popularity amongst the wizarding people,
+       it was certainly not the first broomstick game. In truth, Quidditch probably owed a debt 
+       to a number of its forerunners in making it as successful as it became. All of these archaic
+        broom games were popular in localised areas, but none had the vast appeal that Quidditch did.
+       The beauty of Quidditch was that it took the best aspects of all its predecessors, added its own 
+       unique twists, and ended up as a game that would remain popular with the masses for centuries. </p>
+</div>
+  <div class="house-image fadeInUp">
+    <img src="quidditch1.jpg" alt="Gryffindor Logo" class="foreground-image">
+    <img src="quitich.png" alt="Gryffindor Logo" class="background-image">
+  </div> </section>
+ 
+
+<section class="description-section2 word">
+<div class="fadeInUp">PICTURES OF STUDENTS DOING QUIDDITCH</div>
+</section>
+
+<div class="yellow-container">
+  <div class="large-image fadeInUp">
+    <img src="quidditch2.jpg" alt="Large Image">
+  </div>
+  <div class="small-images fadeInUp">
+    <img src="sport.png" alt="Small Image 1">
+    <img src="quitich2.png" alt="Small Image 2">
+  </div>
+</div>
+
+
+</section>
+
+<div class="footer">
+    HOTTER FANPAGE
+    <br>COPYRIGHT. TAEYOON'S COMPANY
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+  window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// 버튼 클릭 시 페이지 최상단으로 이동하는 함수
+function topFunction() {
+  document.body.scrollTop = 0; // 사파리 브라우저를 위함
+  document.documentElement.scrollTop = 0; // 크롬, 파이어폭스, IE, 오페라를 위함
+}
+</script>
+
+
+  <script>
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight && rect.bottom >= 0
+    );
+}
+
+// Function to run when scrolling occurs
+function runOnScroll() {
+    const elements = document.querySelectorAll('.fadeInUp');
+    for (const element of elements) {
+        if (isInViewport(element)) {
+            element.classList.add('visible');
+        }
+    }
+}
+
+// Listen for scroll events on the window
+window.addEventListener('scroll', runOnScroll);
+</script>
+
+
+</body>
+</html>

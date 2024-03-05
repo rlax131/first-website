@@ -1,0 +1,82 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("intro.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: "Cinzel Decorative", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-container {
+  position: relative;
+  text-align: center; /* 버튼을 중앙에 위치시키기 위함 */
+}
+
+#play-music-button {
+  position: absolute;
+  bottom: -50px; /* 이미지의 하단 바깥으로 50px 정도의 공간을 두어 버튼을 배치합니다 */
+  left: 50%;
+  transform: translateX(-50%); /* 버튼을 정확히 중앙에 위치시킵니다 */
+  /* 버튼 스타일링 */
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  /* 추가 스타일링은 필요에 따라 추가하십시오 */
+}
+/* 기타 필요한 스타일 */
+.welcome-screen {
+  text-align: center;
+  z-index: 1; /* 확실한 레이어 위치를 위해 z-index를 사용 */
+}
+
+.welcome-screen p {
+  font-size: 30px;
+
+  display: inline-block;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.character-image {
+  cursor: pointer;
+  animation: fadeIn 2s ease-in-out forwards;
+  transition: transform 0.3s ease;
+  opacity: 1; /* 초기 투명도 설정 */
+}
+
+.character-image:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadein {
+  cursor: pointer;
+  animation: fadeIn 2s ease-in-out forwards;
+  transition: transform 0.3s ease;
+  opacity: 1; /* 초기 투명도 설정 */
+}
+
+.character-image.fade-out {
+  animation: fadeOut 2s ease-in-out forwards; /* 이미지 사라짐 애니메이션 */
+}

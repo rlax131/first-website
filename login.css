@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+.header {
+  /* 기존 스타일 규칙들 */
+  z-index: 10; /* 헤더가 다른 요소들보다 위에 오도록 설정 */
+  position: relative; /* z-index를 적용하기 위해 position 속성 필요 */
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+.contents {
+  width: 1200px;
+  margin: auto;
+}
+
+.header .contents {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(67, 36, 32);
+  cursor: pointer;
+}
+.header .contents .left {
+  flex: 2;
+  font-family: "Harry P";
+  font-size: 30px;
+}
+.header .contents .right {
+  flex: 4;
+} /*전체를 6으로 하고 2:4로 나눈다는 뜻*/
+
+.header .menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home {
+  color: rgb(160, 110, 35);
+  cursor: pointer;
+}
+
+.header .menu span:hover {
+  color: rgb(255, 128, 0);
+  transition: 0.4s;
+}
+.header .menu li:hover {
+  color: #d62424;
+  transition: 0.4s;
+}
+
+body {
+  background-image: url(login2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%; /* 뷰포트 높이 전체를 사용 */
+  position: relative;
+  font-family: "Gowun Batang", serif;
+}
+
+table {
+  width: 50%;
+  text-align: center;
+}
+
+.harang {
+  background-color: rgba(255, 255, 255, 0.82);
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center-title {
+  text-align: center;
+  font-size: 60px;
+  padding: 30px;
+  color: white;
+  font-family: "Cinzel Decorative", serif;
+}
+.ab {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+}
+.btc {
+  background-color: rgb(221, 161, 48);
+  color: white;
+  border-radius: 5px;
+}
+.btc:hover {
+  background-color: white;
+  color: black;
+}
+.tl {
+  font-size: 10px;
+}
+.a {
+  background-color: rgba(137, 108, 32, 0.574);
+  padding: 10px;
+}
+.table {
+  background-color: gainsboro;
+}
+.round {
+  border-radius: 5px;
+}
+.b {
+  color: red;
+}
+
+#signupButton:hover {
+  background-color: rgb(146, 108, 2); /* 마우스 오버 시 배경색 변경 */
+}
+.last {
+  text-align: center;
+  font-size: 50px;
+  padding: 50px;
+  color: white;
+}
+
+.two-btn {
+  display: flex;
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.two-btn div {
+  padding: 15px 10px;
+  font-size: 16px;
+  border: 1px solid #9c9c9c;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+.first-btn {
+  background-color: #943a11;
+  color: white;
+}
+.second-btn {
+  margin-left: 20px;
+  background-color: rgb(166, 88, 43);
+  color: white;
+}
+.first-btn:hover {
+  background-color: rgb(156, 80, 68);
+  transition: 0.3s;
+}
+
+.second-btn:hover {
+  background-color: rgb(212, 126, 80);
+  transition: 0.3s;
+}
+.box {
+  background-color: #67261c;
+  width: 40%;
+  height: 500px;
+  padding: 25px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+}
+.bigbox {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-right: 30px;
+}

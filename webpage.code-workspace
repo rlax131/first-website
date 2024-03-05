@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../수업"
+		},
+		{
+			"path": "../연습용"
+		},
+		{
+			"path": "../수업2"
+		},
+		{
+			"path": "../tt"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "webpage"
+	}
+}

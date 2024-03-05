@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harry Potter Themed Page</title>
+<link rel="stylesheet" href="harry.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+           <div class="header">
+            <div class="menu-button"><i class="fas fa-bars"></i></div>
+            <div class="contents">
+                <div class="left">HARRY POTTER</div>
+                <div class="right">
+                    <ul class="menu">
+                        <span class="home" onclick="location.href='kim.html'">HOME</span>
+                        <li onclick="location.href='sport.html'">SPORTS</li>
+                        <li onclick="location.href='house.html'">HOUSES</li>
+                       <li onclick="location.href='login.html'">LOGIN</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+<div class="container">
+  <div class="image-overlay">
+    <div class="text" style="line-height: 29px;">
+      <h1>HARRY POTTER</h1><br>
+      <p>Harry's defining traits, as they have been throughout the series, are bravery,
+         determination, and self-sacrifice. A true Gryffindor, Harry responds to every 
+         crisis with courage and resolve. It would simply never occur to Harry to abandon 
+          his quest or to choose some other life. Not that he has any viable alternatives.</p>
+        <br>HOUSE: Gryffindor
+        <br>FULL NAME:	Harry James Potter <br>
+        NICKNAMES:	The Boy Who Lived, The Chosen One<br>
+        FAMILY:	James Potter, Lily Potter
+        </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+<div class="container2">
+<div class="red-box">
+   <img src="harry5.png" alt="">
+  <div class="overlay-text">HARRY'S PERSONALITY </div>
+   <div class="side-text">롤링에 따르면 해리는 자신의 양심에 의해 강하게 인도되며, 무엇이 옳고 그름에 대한 예리한
+     감정을 갖고 있다. 롤링은 "진정으로 배려하는 어른들에 대한 접근이 매우 제한적"이라며 "어릴 때부터 스스로 결정을
+      내릴 수밖에 없다"고 말했다. 그는 '실수를 한다'고 인정했지만, 결국 그는 그의 양심이 시키는 대로 한다. 롤링에 따르면,
+       해리의 중요한 장면 중 네 번째 책에서 그가 죽은 학교 친구인 케드릭 디고리의 시신을 볼드모트로부터 보호하는 장면이 
+       나오는데, 이는 그가 용감하고 사심이 없다는 것을 보여주기 때문이다.</div>
+   
+  </div>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var menuButton = document.querySelector('.menu-button');
+  var header = document.querySelector('.header');
+
+  menuButton.addEventListener('click', function() {
+    header.classList.toggle('active'); // 헤더에 'active' 클래스 토글
+  });
+});
+</script>
+</body>
+</html>

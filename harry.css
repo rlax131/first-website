@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Gowun Batang", serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+.header {
+  /* 기존 스타일 규칙들 */
+  z-index: 10; /* 헤더가 다른 요소들보다 위에 오도록 설정 */
+  position: relative; /* z-index를 적용하기 위해 position 속성 필요 */
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+.contents {
+  width: 1200px;
+  margin: auto;
+}
+
+.header .contents {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(67, 36, 32);
+  cursor: pointer;
+}
+.header .contents .left {
+  flex: 2;
+  font-family: "Harry P";
+  font-size: 30px;
+}
+.header .contents .right {
+  flex: 4;
+} /*전체를 6으로 하고 2:4로 나눈다는 뜻*/
+
+.header .menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home {
+  color: rgb(160, 110, 35);
+  cursor: pointer;
+}
+
+.header .menu span:hover {
+  color: rgb(255, 128, 0);
+  transition: 0.4s;
+}
+.header .menu li:hover {
+  color: #d62424;
+  transition: 0.4s;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.image-overlay {
+  position: relative;
+  background-image: url("harry3.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.image-overlay .text {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 51px;
+  margin-left: 79px; /* Adjust the margin as needed */
+  width: 40%; /* Adjust the width as needed */
+  height: 450px;
+  overflow: auto;
+  margin-top: 314px;
+}
+
+@media (max-width: 768px) {
+  .image-overlay .text {
+    margin-left: 20px;
+    width: auto;
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #f5f5f5; /* 배경색상은 원하는 대로 조절하세요 */
+}
+
+.text-content {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.image-content {
+  flex-basis: 50%;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .text-content,
+  .image-content {
+    flex-basis: 100%;
+  }
+}
+
+.container2 {
+  position: relative;
+  width: 100%;
+  height: 698px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #58423d;
+}
+
+.red-box {
+  position: relative;
+  top: 41px; /* 하얀색 섹션 위로 50px 이동 */
+  left: 30%; /* 중앙에 위치 */
+  transform: translateX(-50%); /* 중앙 정렬을 위해 x축 기준 50% 이동 */
+  width: 38%; /* 붉은색 박스의 너비 */
+  height: 526px; /* 붉은색 박스의 높이 */
+  background-color: #532319; /* 붉은색 배경 */
+}
+
+.red-box img {
+  position: absolute;
+  top: 84px; /* 이미지가 박스 위로 100px 튀어나오도록 설정 */
+  transform: translateX(-50%); /* 이미지 중앙 정렬 */
+  height: 72%;
+  left: 520px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 390px;
+  left: 210px;
+  color: rgb(157, 132, 132);
+  z-index: 2;
+  padding: 8px;
+  font-size: 50px;
+  font-weight: 400;
+  width: 600px;
+}
+
+.side-text {
+  position: absolute;
+  top: 38%; /* 이미지 옆에 텍스트 위치 조정 */
+  right: -686px; /* 텍스트 너비에 따라 조정 */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* 텍스트 배경색 */
+  padding: 5px;
+  z-index: 2;
+  width: 569px; /* 텍스트 박스 너비 */
+  transform: translateY(-50%);
+  height: 404px;
+  text-align: center;
+  padding: 60px 60px 60px 60px;
+  line-height: 33px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  /* 컨텐츠의 너비를 100%로 설정하여 화면 크기에 맞춤 */
+  .contents,
+  .image-overlay .text {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px; /* 적절한 패딩을 추가하여 텍스트가 화면 가장자리에 닿지 않도록 함 */
+    margin-top: 0; /* 상단 마진 조정 */
+    height: auto; /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조정됨 */
+  }
+
+  /* 이미지 오버레이의 배경 이미지 크기 조정 */
+  .image-overlay {
+    background-size: contain; /* 이미지가 컨테이너에 맞게 조정되도록 함 */
+    background-position: top center; /* 이미지가 상단 중앙에 위치하도록 조정 */
+  }
+
+  /* 이미지 크기 및 위치 조정 */
+  .red-box img {
+    top: 126px; /* 이미지를 박스 상단에 위치 */
+    left: 39%; /* 중앙에 위치 */
+    height: 35%; /* 이미지의 높이를 자동으로 설정하여 비율 유지 */
+    width: 117%; /* 이미지의 너비를 박스 너비에 맞춤 */
+  }
+  .red-box {
+    top: 6px;
+    left: 30%;
+    transform: translate(-50%);
+    width: 38%;
+    height: 392px;
+  }
+
+  /* 텍스트 박스의 위치 및 크기 조정 */
+  .overlay-text,
+  .side-text {
+    top: auto; /* 위치를 자동으로 조정 */
+    right: auto; /* 오른쪽 위치 해제 */
+    transform: translateX(109%) translateY(5%); /* 중앙 정렬을 위한 변환 해제 */
+    width: auto; /* 텍스트 박스 너비를 자동으로 조정 */
+    height: auto; /* 텍스트 박스 높이를 자동으로 조정 */
+    font-size: 7px; /* 작은 화면에서 텍스트 크기를 줄임 */
+    padding: 13px; /* 텍스트 주변에 패딩 추가 */
+  }
+
+  /* 모바일 뷰에서 header의 위치를 고정에서 해제 */
+  .header {
+    position: static;
+    z-index: 10;
+  }
+
+  /* 모바일 뷰에서 메뉴 스타일 조정 */
+  .header .menu {
+    flex-direction: column; /* 메뉴 항목을 세로로 배열 */
+    align-items: center; /* 메뉴 항목을 가운데 정렬 */
+    z-index: 10;
+  }
+
+  /* 메뉴 항목에 대한 스타일 추가 */
+  .header .menu li {
+    padding: 10px; /* 메뉴 항목 주변에 패딩 추가 */
+  }
+
+  /* 더 작은 화면에서 헤더 로고와 메뉴 사이의 공간 조정 */
+  .header .contents .left,
+  .header .contents .right {
+    flex: 1;
+  }
+
+  /* 컨테이너 높이 조정 */
+  .container,
+  .container2 {
+    height: auto; /* 컨테이너의 높이를 자동으로 조정 */
+    padding-top: 20px; /* 컨테이너 상단에 패딩 추가 */
+    padding-bottom: 20px; /* 컨테이너 하단에 패딩 추가 */
+  }
+}
+
+.menu-button {
+  display: none; /* 기본적으로 숨김 */
+  font-size: 30px; /* 아이콘 크기 */
+  cursor: pointer;
+  z-index: 11; /* 헤더 위에 보이도록 */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* 화면이 768px 이하일 때 메뉴와 햄버거 버튼의 스타일을 변경 */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* 햄버거 버튼 보임 */
+  }
+
+  /* 메뉴를 숨기고 햄버거 메뉴 버튼을 표시 */
+  .header .contents .right .menu {
+    display: none; /* 메뉴 숨김 */
+    flex-direction: column; /* 메뉴 항목을 세로로 나열 */
+    background-color: white; /* 배경색 지정 */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%; /* 전체 너비 */
+    text-align: left;
+    padding-left: 10px; /* 텍스트와 왼쪽 가장자리 사이의 간격 */
+  }
+
+  /* 햄버거 메뉴 버튼 활성화 시 메뉴 표시 */
+  .header.active .contents .right .menu {
+    display: flex; /* 메뉴 보임 */
+  }
+
+  /* 메뉴 항목 스타일 */
+  .header .menu li,
+  .header .menu .home {
+    padding: 10px 0; /* 상하 패딩 추가 */
+    border-bottom: 1px solid #ddd; /* 항목 사이의 구분선 추가 */
+  }
+
+  /* 로고와 메뉴 버튼을 제외한 나머지 헤더 내용 숨김 */
+  .header .contents .left,
+  .header .contents .right ul {
+    display: none;
+  }
+}

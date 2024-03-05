@@ -1,0 +1,145 @@
+body {
+  background-image: url(login.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh; /* 뷰포트 높이 전체를 사용 */
+  position: relative;
+  font-family: "Gowun Batang", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+.header {
+  /* 기존 스타일 규칙들 */
+  z-index: 10; /* 헤더가 다른 요소들보다 위에 오도록 설정 */
+  position: relative; /* z-index를 적용하기 위해 position 속성 필요 */
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+.contents {
+  width: 1200px;
+  margin: auto;
+}
+
+.header .contents {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(67, 36, 32);
+  cursor: pointer;
+}
+.header .contents .left {
+  flex: 2;
+  font-family: "Harry P";
+  font-size: 30px;
+}
+.header .contents .right {
+  flex: 4;
+} /*전체를 6으로 하고 2:4로 나눈다는 뜻*/
+
+.header .menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+}
+.home {
+  color: rgb(160, 110, 35);
+  cursor: pointer;
+}
+
+.header .menu span:hover {
+  color: rgb(255, 128, 0);
+  transition: 0.4s;
+}
+.header .menu li:hover {
+  color: #d62424;
+  transition: 0.4s;
+}
+
+table {
+  width: 50%;
+  text-align: center;
+}
+.harang {
+  background-color: rgba(255, 255, 255, 0.82);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center-title {
+  text-align: center;
+  font-size: 60px;
+  padding: 30px;
+  color: white;
+  font-family: "Cinzel Decorative", serif;
+}
+.ab {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+}
+.btc {
+  background-color: rgb(221, 161, 48);
+  color: white;
+  border-radius: 5px;
+}
+.btc:hover {
+  background-color: white;
+  color: black;
+}
+.tl {
+  font-size: 10px;
+}
+.a {
+  background-color: rgba(137, 108, 32, 0.574);
+  padding: 10px;
+}
+.table {
+  background-color: gainsboro;
+}
+.round {
+  border-radius: 5px;
+}
+.b {
+  color: red;
+}
+
+#signupButton {
+  background-color: rgb(86, 62, 42); /* 기본 배경색 */
+  color: white; /* 글자색 */
+  border: none; /* 테두리 없음 */
+  padding: 15px 30px; /* 상하, 좌우 패딩 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  text-decoration: none; /* 텍스트 꾸미기 없음 */
+  display: inline-block; /* 인라인 블록 요소로 표시 */
+  font-size: 20px; /* 글자 크기 */
+  margin: 4px 2px; /* 마진 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+  border-radius: 10px;
+}
+
+#signupButton:hover {
+  background-color: rgb(146, 108, 2); /* 마우스 오버 시 배경색 변경 */
+}
+.last {
+  text-align: center;
+  font-size: 50px;
+  padding: 50px;
+  color: white;
+}
