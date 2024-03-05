@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts Entrance</title>
+    <link rel="stylesheet" type="text/css" href="intro.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/icons/music?f=classic&s=light"
+    />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </head>
+  <body>
+    <div class="music-container">
+      <div class="welcome-screen">
+        <p class="fadein">Welcome to the world of Harry potter</p>
+        <br />
+        <img
+          src="title.png"
+          alt="Clickable Image"
+          class="character-image"
+          id="clickableImage"
+        />
+      </div>
+
+      <!-- 음악 재생 버튼 -->
+      <button id="playButton">
+        <i class="fa-solid fa-music"></i> Play Music
+      </button>
+      <audio id="myAudio" preload="auto">
+        <source src="Hedwig's Theme.mp4" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <!-- JavaScript 코드를 포함합니다 -->
+    <script>
+      document
+        .getElementById("playButton")
+        .addEventListener("click", function () {
+          var audio = document.getElementById("myAudio");
+
+          // 오디오 재생 전에 재생 가능한지 확인
+          if (audio.readyState >= 3) {
+            audio.play();
+          } else {
+            // 오디오가 충분히 로드되지 않은 경우, 로드될 때까지 기다립니다.
+            audio.addEventListener("canplay", function () {
+              audio.play();
+            });
+          }
+        });
+
+      document
+        .getElementById("clickableImage")
+        .addEventListener("click", function () {
+          this.style.opacity = "0"; // 투명도를 0으로 설정
+          this.style.animation = "fadeOut 2s ease-in-out forwards";
+
+          setTimeout(function () {
+            window.location.href = "kim.html"; // 이동할 URL
+          }, 2000); // 2초 후 페이지 이동
+        });
+    </script>
+  </body>
+</html>
